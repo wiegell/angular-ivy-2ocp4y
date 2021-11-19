@@ -9,6 +9,11 @@ import { HttpsError } from '@firebase/functions-types';
 })
 export class AppComponent implements OnInit {
   error = 'httpserror';
+  expected: HttpsError = {
+    code: 'internal',
+    message: 'something',
+    name: 'FirebaseError',
+  };
 
   constructor(private aff: AngularFireFunctions) {}
 
